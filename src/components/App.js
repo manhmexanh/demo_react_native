@@ -1,27 +1,18 @@
-import React, {Component} from 'react'
-import {createStackNavigator, createAppContainer} from 'react-navigation';
-import Home from './Home';
-import Splash from './Splash';
-import {StyleHeaderApp} from '../styles/StyleApp';
+import React from 'react'
+import {createAppContainer} from 'react-navigation';
+import {InitialNavigator} from './navigator/InitialNavigator';
+import {Provider} from 'react-redux';
+import { createStore } from 'redux';
+import reducers from '../reducers/index'
 
-const MainNavigator = createStackNavigator({
-    Splash: {
-        screen: Splash,
-        navigationOptions: {
-            header: null
-        }
-    },
-    Home: {
-        screen: Home,
-        navigationOptions: {
-            title: "Home",
-            headerTitleStyle: StyleHeaderApp,
-            headerLeft: null,
-            gesturesEnabled: false,
-        }
-    },
-});
+const AppContainer = createAppContainer(InitialNavigator);
 
-const App = createAppContainer(MainNavigator);
+class App extends React.Component {
+    render() {
+        return (
+                <AppContainer/>
+        );
+    }
+}
 
-export default App
+export default App;

@@ -1,11 +1,13 @@
 import React, {Component} from 'react'
 import {
-    Image,
-    ScrollView,
-    Text,
     View,
+    FlatList,
+    Image,
+    Text,
+    ScrollView
 } from 'react-native'
 import {StyleHome} from '../styles/StyleHome';
+import {mockedData} from '../database/mockData';
 
 export default class Home extends Component {
     constructor(props) {
@@ -13,26 +15,48 @@ export default class Home extends Component {
         this.state = {count: 0}
     }
 
-    onPress = () => {
-        this.setState({
-            count: this.state.count + 1
-        })
-    };
-
     render() {
+        console.log(mockedData);
         return (
             <View style={StyleHome.container}>
                 <ScrollView>
-                    <View style ={StyleHome.row}>
+                    <View style={StyleHome.row}>
+                        <FlatList
+                            keyExtractor={(item, index) => item.title}
+                            data={mockedData}
+                            renderItem={({item}) => (<View style ={StyleHome.item}>
+                                <Image
+                                    source={{uri: item.artwork_url}}
+                                    style={StyleHome.image}/>
+                            </View>)}
+                            horizontal={true}/>
                     </View>
-                    <View style ={StyleHome.row}>
+                    <View style={StyleHome.row}>
+                        <FlatList
+                            keyExtractor={(item, index) => item.title}
+                            data={mockedData}
+                            renderItem={({item}) => (<View style ={StyleHome.item}>
+                                <Image
+                                    source={{uri: item.artwork_url}}
+                                    style={StyleHome.image}/>
+                            </View>)}
+                            horizontal={true}/>
                     </View>
-                    <View style ={StyleHome.row}>
-                    </View>
-                    <View style ={StyleHome.row}>
+                    <View style={StyleHome.row}>
+                        <FlatList
+                            keyExtractor={(item, index) => item.title}
+                            data={mockedData}
+                            renderItem={({item}) => (<View style ={StyleHome.item}>
+                                <Image
+                                    source={{uri: item.artwork_url}}
+                                    style={StyleHome.image}/>
+                            </View>)}
+                            horizontal={true}/>
                     </View>
                 </ScrollView>
+
             </View>
         )
     }
 }
+

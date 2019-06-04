@@ -1,6 +1,6 @@
 import {StyleSheet} from 'react-native'
 
-export const StyleHome = StyleSheet.create({
+export const StyleLibrary = StyleSheet.create({
     container: {
         flex: 1,
         justifyContent: 'center',
@@ -22,12 +22,5 @@ export const StyleHome = StyleSheet.create({
     },
     countText: {
         color: '#FF00FF'
-    },
-    image : {
-        width: 200, height: 200
-    },
-    item:{
-      alignItems:'center',
-      padding: 20
     }
 });
