@@ -2,16 +2,16 @@ import React, {Component} from 'react'
 import {
     View,
 } from 'react-native'
-import {StyleHome} from '../styles/StyleHome';
+import {StyleMore} from '../styles/StyleMore';
 
-export default class Home extends Component {
+export default class More extends Component {
     constructor(props) {
         super(props);
         this.state = {count: 0}
     }
     render() {
         return (
-            <View style={StyleHome.container}>
+            <View style={StyleMore.container}>
             </View>
         )
     }

@@ -4,11 +4,6 @@ import {
 } from 'react-native'
 import LinearGradient from 'react-native-linear-gradient';
 import {ColorSplash, StyleSplash} from '../styles/StyleSplash';
-import { StackActions } from 'react-navigation';
-
-const replaceAction = StackActions.replace({
-    routeName: 'Home',
-});
 
 export default class Splash extends Component {
 
@@ -30,7 +25,7 @@ export default class Splash extends Component {
             delay: 200,
             duration: 3000
         }).start(() => {
-            this.props.navigation.dispatch(replaceAction);
+            this.props.navigation.navigate('App');
         });
     }
 

@@ -2,16 +2,17 @@ import React, {Component} from 'react'
 import {
     View,
 } from 'react-native'
-import {StyleHome} from '../styles/StyleHome';
+import {StyleStream} from '../styles/StyleStream';
 
-export default class Home extends Component {
+export default class Stream extends Component {
     constructor(props) {
         super(props);
         this.state = {count: 0}
     }
+
     render() {
         return (
-            <View style={StyleHome.container}>
+            <View style={StyleStream.container}>
             </View>
         )
     }

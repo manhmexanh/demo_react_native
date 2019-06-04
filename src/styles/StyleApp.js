@@ -1,4 +1,3 @@
-export const StyleHeaderApp = {
-    color: '#a9a9a9',
-    fontWeight: 'normal',
+export const StyleApp = {
+    text:{fontSize: 10, color: tintColor, textAlign: 'center'}
 };
